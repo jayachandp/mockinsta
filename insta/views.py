@@ -78,7 +78,7 @@ class InstaPostLikeView(APIView):
             insta_post.likes.add(request.user)
         except InstaPost.DoesNotExist:
             return Response(
-                {'Error': f'Post with f{post_id} not found'}, 
+                {'Error': f'Post with {post_id} not found'}, 
                 status=status.HTTP_404_NOT_FOUND
             )
         return Response(
