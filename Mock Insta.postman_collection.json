@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "c16b5acb-8307-43d8-9b66-62276ba7e17b",
+		"name": "Mock Insta",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token c7bb4ddca0a03a9dd66001b39197528031712714",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"timestamp\": \"2021-01-01T00:00:00+00:00\",\n        \"reading\": \"108.2\",\n        \"device_id\": \"d28ef43e-dadf-4a35-aeff-74b0f216993e\",\n        \"customer_id\": \"8e1f8c2c-7e1d-4d29-a86c-39777dd95a07\"\n    },\n    {\n        \"timestamp\": \"2021-01-01T01:00:00+00:00\",\n        \"reading\": \"101.2\",\n        \"device_id\": \"\",\n        \"customer_id\": \"\"\n    },\n    {\n        \"timestamp\": \"2021-01-01T02:00:00+00:00\",\n        \"reading\": \"190.2\",\n        \"device_id\": \"d28ef43e-dadf-4a35-aeff-74b0f216993e\",\n        \"customer_id\": \"8e1f8c2c-7e1d-4d29-a86c-39777dd95a07\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token e3b8fd4dd04ca0c7c4e4ed8bfa7a160fbc2a45c7",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/users/unfollow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token e3b8fd4dd04ca0c7c4e4ed8bfa7a160fbc2a45c7",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user_id",
+							"value": "4",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/unfollow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"unfollow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token c7bb4ddca0a03a9dd66001b39197528031712714",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/posts/like",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token df4e7fc26a93b8de61d14633d0bd2398a47547c7",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post_id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/posts/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/posts/unlike",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token df4e7fc26a93b8de61d14633d0bd2398a47547c7",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "post_id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/posts/unlike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"unlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/home",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token df4e7fc26a93b8de61d14633d0bd2398a47547c7",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/home",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"home"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
